@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Favorites</title>
+        <link rel="stylesheet" type = "text/css" a href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <!--See the display fav function below -->
+    <body onload="displayFav()">
+    
+    <!-- Header goes here -->
+    <div class="header"><img src="logo.png" style="float:left; padding-left:20px;"></div><br>
+
+
+    <!-- Side naviation bar that pops up -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="totry.html">To Try List</a>
+        <a href="previous.html">Previous recipes</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="recommended.html">Recommended</a>
+      </div>
+
+      <!-- Change the word based on the page we're currently on -->
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Favorites </span>
+      
+
+      <!-- Functions for the opening and closing of the navbar -->
+      <script>
+      function openNav() { document.getElementById("mySidenav").style.width = "250px"; }
+      function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+      </script>
+
+    <div id="main">
+        <div class="blockquote"> Browse through your favorited recipes! </div>
+        <div class="photowrapper">
+                
+        <!--DISPLAY RECIPES FROM USER DATABASE HERE -->
+        <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+
+        </div>
+    </div> <!-- end of main -->
+    
+      <script type="text/javascript" src="favorite.js"> 
+    
+// 		function fav() {
+// 			var favRecipe = [];
+// 			favRecipe = start();
+// 			for (var i = 0; i < favRecipe.length; i++) {
+// 				document.getElementByID("recipe").innerhtml = favRecipe[i].recipename +
+// 				favRecipe[i].cuisine;
+// 			}
+
+// 		}
+		
+ 	 </script> 
+ 	
+ 	<!--Maybe the issue lies where the external script is called...-->
+ 	<!--<script type="text/javascript" src="favorites.js"></script>-->
+ 
+ <!--	<div id="recipe" style="font-size: 20px"></div> -->
+
+<!--<section class="get">-->
+<!--    <h1>Your Favorite Recipes</h1>-->
+<!--    <a href="/get-data">Load fav recipes</a>-->
+<!--    <div>-->
+<!--        {{# each items}}-->
+<!--        <section class="item">-->
+<!--            <div>Recipe: {{this.recipename}} </div>-->
+<!--            <div>Cuisine: {{this.cuisine}} </div>-->
+<!--        </section>-->
+<!--        {{/each}}-->
+<!--    </div>-->
+<!--</section>-->
+
+    </body>
+</html>
